@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo "Running custom cleanup tasks..."
+npm run heroku-cleanup
