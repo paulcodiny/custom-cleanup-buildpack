@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 echo "Running custom cleanup tasks..."
+
+# Change to the root directory of the app
+cd "$1"
+
+# Run the cleanup script from the package.json
 npm run heroku-cleanup
