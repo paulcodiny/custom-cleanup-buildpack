@@ -340,3 +340,8 @@ async function transformCommandsForRoot(commands) {
 }
 EOF
 npx playwright install --only-shell chromium
+
+ls -la node_modules/playwright-core
+export DEBUG=ps:*
+npx playwright install --only-shell chromium
+ls -la node_modules/playwright-core
