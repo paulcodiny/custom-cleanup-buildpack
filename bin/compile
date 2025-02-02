@@ -276,6 +276,7 @@ async function missingFileDependencies(filePath, extraLDPaths) {
   if (process.env.LD_LIBRARY_PATH) LD_LIBRARY_PATH = `${process.env.LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}`;
   console.log(process.env);
   console.log(LD_LIBRARY_PATH);
+  return [];
   const {
     stdout,
     code
