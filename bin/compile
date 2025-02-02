@@ -7,5 +7,7 @@ cd "$1"
 # Run the playwright install
 cat .profile
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/.apt/usr/lib/x86_64-linux-gnu/
+echo $LD_LIBRARY_PATH
 ls -la .apt/usr/lib/x86_64-linux-gnu
+ls node_modules/playwright-core
 npx playwright install --only-shell chromium
