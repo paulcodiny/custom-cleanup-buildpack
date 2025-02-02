@@ -359,4 +359,4 @@ ls /app/.cache/ms-playwright/chromium_headless_shell-1155
 echo '3'
 mkdir node_modules/playwright-core/.local-browsers
 echo '4'
-mv .cache/ms-playwright/chromium_headless_shell-1155 node_modules/playwright-core/.local-browsers
+mv /app/.cache/ms-playwright/chromium_headless_shell-1155 node_modules/playwright-core/.local-browsers
