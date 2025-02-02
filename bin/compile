@@ -356,3 +356,4 @@ ls -la /app
 ls -la /app/.cache
 pwd
 ls -la .
+printenv
