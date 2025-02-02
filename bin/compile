@@ -353,3 +353,6 @@ export DEBUG=pw:*
 npx playwright install --only-shell chromium
 ls -la node_modules/playwright-core
 ls -la /app
+ls -la /app/.cache
+pwd
+ls -la .
