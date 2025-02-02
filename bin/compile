@@ -5,7 +5,7 @@ echo "Running custom cleanup tasks..."
 cd "$1"
 
 # Run the playwright install
-echo $LD_LIBRARY_PATH
-ls -la .
-ls -la .apt/usr/lib
+cat .profile
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/.apt/usr/lib/x86_64-linux-gnu/
+ls -la .apt/usr/lib/x86_64-linux-gnu
 npx playwright install --only-shell chromium
