@@ -357,3 +357,6 @@ ls -la /app/.cache
 pwd
 ls -la .
 printenv
+ls /app/.cache/ms-playwright/chromium_headless_shell-1155
+mkdir /app/node_modules/playwright-core/.local-browsers
+mv /app/.cache/ms-playwright/chromium_headless_shell-1155 /app/node_modules/playwright-core/.local-browsers
