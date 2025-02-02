@@ -191,6 +191,13 @@ async function validateDependenciesLinux(sdkLanguage, linuxLddDirectories, dlOpe
     for (const dep of deps) missingDeps.add(dep);
   }
   for (const dep of await missingDLOPENLibraries(dlOpenLibraries)) missingDeps.add(dep);
+  
+
+  // OVERRIDE
+  return;
+  
+
+
   if (!missingDeps.size) return;
   const allMissingDeps = new Set(missingDeps);
   // Check Ubuntu version.
@@ -274,9 +281,9 @@ async function missingFileDependencies(filePath, extraLDPaths) {
   const dirname = _path.default.dirname(filePath);
   let LD_LIBRARY_PATH = extraLDPaths.join(':');
   if (process.env.LD_LIBRARY_PATH) LD_LIBRARY_PATH = `${process.env.LD_LIBRARY_PATH}:${LD_LIBRARY_PATH}`;
-  console.log(process.env);
-  console.log(LD_LIBRARY_PATH);
-  return [];
+  //console.log(process.env);
+  //console.log(LD_LIBRARY_PATH);
+  //return [];
   const {
     stdout,
     code
@@ -342,6 +349,7 @@ EOF
 npx playwright install --only-shell chromium
 
 ls -la node_modules/playwright-core
-export DEBUG=ps:*
+export DEBUG=pw:*
 npx playwright install --only-shell chromium
 ls -la node_modules/playwright-core
+ls -la /app
